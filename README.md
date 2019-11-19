@@ -1,4 +1,4 @@
-# Ερώτημα 1.
+# _Ερώτημα 1_
 Τα περισσότερα στοιχεία τα παίρνω μέσα από την main.
 
 * CPU Type:  Υπάρχουν 3 τύποι CPU, οι atomic, minor και hpi. Ο default είναι ο atomic.  
@@ -33,7 +33,7 @@
 * Cache: `cache_line_size = 64`.  
 
 
-# Ερώτημα 2.
+# _Ερώτημα 2_
 Από το config.ini μπορώ να βρω τα εξής:
 * Τύπος CPU Minor (αφού τρέχουμε την εντολή με τον minor):  
 Line 67: `type=MinorCPU`
@@ -49,12 +49,12 @@ Line 46: `clock=1000`
 Line 15: `cache_line_size=64`      
 
 
-# Ερώτημα 3
-Minor is an in-order processor model with a fixed pipeline but configurable data structures and execute behaviour. It is intended to be used to model processors with strict in-order execution behaviour and allows visualisation of an instruction's position in the pipeline through the MinorTrace/minorview.py format/tool. The intention is to provide a framework for micro-architecturally correlating the model with a particular, chosen processor with similar capabilities.  
+# _Ερώτημα 3_
+**Minor** is an _in-order processor_ model with a fixed pipeline but configurable data structures and execute behaviour. It is intended to be used to model processors with strict in-order execution behaviour and allows visualisation of an instruction's position in the pipeline through the MinorTrace/minorview.py format/tool. The intention is to provide a framework for micro-architecturally correlating the model with a particular, chosen processor with similar capabilities.  
 
-The model isn't currently capable of multithreading but there are THREAD comments in key places where stage data needs to be arrayed to support multithreading.
+The model **isn't** currently capable of multithreading but there are THREAD comments in key places where stage data needs to be arrayed to support multithreading.
 
-## Ερώτημα 3a  
+## _Ερώτημα 3a_  
 Από το stats.txt για την εκτέλεση με τον minorCPU παίρνω τα εξής:
 <pre>
 final_tick                                   36381000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
@@ -86,7 +86,7 @@ sim_ticks                                    44310000                       # Nu
 
 > Με τα παραπάνω αποτελέσματα παρατηρώ ότι το πρόγραμμα εκτελέστηκε γρηγορότερα με τον TimingSimpleCPU από ότι με τον MinorCPU.
 
-## Ερώτημα 3c  
+## _Ερώτημα 3c_  
 Αλλάζοντας την συχνότητα σε 10KHz, έχω τα εξής αποτελέσματα σε χρόνους για τον minorCPU:
 <pre>
 final_tick                               2160100000000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
