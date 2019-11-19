@@ -58,11 +58,11 @@ The model **isn't** currently capable of multithreading but there are THREAD com
 Από το stats.txt για την εκτέλεση με τον minorCPU παίρνω τα εξής:
 <pre>
 final_tick                                   36381000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
-host_inst_rate                                 231814                       # Simulator instruction rate (inst/s)
-host_mem_usage                                 711628                       # Number of bytes of host memory used
-host_op_rate                                   266784                       # Simulator op (including micro ops) rate (op/s)
-host_seconds                                     0.06                       # Real time elapsed on the host
-host_tick_rate                              648402559                       # Simulator tick rate (ticks/s)
+host_inst_rate                                 187504                       # Simulator instruction rate (inst/s)
+host_mem_usage                                 711632                       # Number of bytes of host memory used
+host_op_rate                                   216063                       # Simulator op (including micro ops) rate (op/s)
+host_seconds                                     0.07                       # Real time elapsed on the host
+host_tick_rate                              525192828                       # Simulator tick rate (ticks/s)
 sim_freq                                 1000000000000                       # Frequency of simulated ticks
 sim_insts                                       12972                       # Number of instructions simulated
 sim_ops                                         14964                       # Number of ops (including micro ops) simulated
@@ -72,11 +72,11 @@ sim_ticks                                    36381000                       # Nu
 Από το stats.txt για την εκτέλεση με τον TimingSimpleCPU παίρνω τα εξής:
 <pre>
 final_tick                                   44310000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
-host_inst_rate                                 689636                       # Simulator instruction rate (inst/s)
+host_inst_rate                                 360911                       # Simulator instruction rate (inst/s)
 host_mem_usage                                 707276                       # Number of bytes of host memory used
-host_op_rate                                   787408                       # Simulator op (including micro ops) rate (op/s)
-host_seconds                                     0.02                       # Real time elapsed on the host
-host_tick_rate                             2354650922                       # Simulator tick rate (ticks/s)
+host_op_rate                                   413645                       # Simulator op (including micro ops) rate (op/s)
+host_seconds                                     0.04                       # Real time elapsed on the host
+host_tick_rate                             1237689480                       # Simulator tick rate (ticks/s)
 sim_freq                                 1000000000000                       # Frequency of simulated ticks
 sim_insts                                       12887                       # Number of instructions simulated
 sim_ops                                         14803                       # Number of ops (including micro ops) simulated
@@ -90,11 +90,11 @@ sim_ticks                                    44310000                       # Nu
 Αλλάζοντας την συχνότητα σε 10KHz, έχω τα εξής αποτελέσματα σε χρόνους για τον minorCPU:
 <pre>
 final_tick                               2160100000000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
-host_inst_rate                                   4035                       # Simulator instruction rate (inst/s)
+host_inst_rate                                   4036                       # Simulator instruction rate (inst/s)
 host_mem_usage                                 711628                       # Number of bytes of host memory used
-host_op_rate                                     4655                       # Simulator op (including micro ops) rate (op/s)
+host_op_rate                                     4656                       # Simulator op (including micro ops) rate (op/s)
 host_seconds                                     3.21                       # Real time elapsed on the host
-host_tick_rate                           671964561234                       # Simulator tick rate (ticks/s)
+host_tick_rate                           672128542118                       # Simulator tick rate (ticks/s)
 sim_freq                                 1000000000000                       # Frequency of simulated ticks
 sim_insts                                       12972                       # Number of instructions simulated
 sim_ops                                         14964                       # Number of ops (including micro ops) simulated
@@ -105,16 +105,17 @@ sim_ticks                                2160100000000                       # N
 Αλλάζοντας την συχνότητα σε 10KHz, έχω τα εξής αποτελέσματα σε χρόνους για τον TimingSimpleCPU:
 <pre>
 final_tick                               3965900000000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
-host_inst_rate                                   2242                       # Simulator instruction rate (inst/s)
-host_mem_usage                                 707276                       # Number of bytes of host memory used
-host_op_rate                                     2575                       # Simulator op (including micro ops) rate (op/s)
-host_seconds                                     5.75                       # Real time elapsed on the host
-host_tick_rate                           689928409045                       # Simulator tick rate (ticks/s)
+host_inst_rate                                   2224                       # Simulator instruction rate (inst/s)
+host_mem_usage                                 707280                       # Number of bytes of host memory used
+host_op_rate                                     2554                       # Simulator op (including micro ops) rate (op/s)
+host_seconds                                     5.80                       # Real time elapsed on the host
+host_tick_rate                           684281789231                       # Simulator tick rate (ticks/s)
 sim_freq                                 1000000000000                       # Frequency of simulated ticks
 sim_insts                                       12887                       # Number of instructions simulated
 sim_ops                                         14803                       # Number of ops (including micro ops) simulated
 sim_seconds                                  3.965900                       # Number of seconds simulated
 sim_ticks                                3965900000000                       # Number of ticks simulated
+system.cpu.Branches                              2653                       # Number of branches fetched
 </pre>  
 
 > ###  Αλλάζοντας σημαντικά τη συχνότητα σε 10KHz από 1GHz που είχαμε στο προηγούμενο ερώτημα, βλέπω πως τώρα ο minorCPU εκτελεί το πρόγραμμα γρηγορότερα από ότι τον TimingSimpleCPU.
@@ -122,11 +123,11 @@ sim_ticks                                3965900000000                       # N
 Τώρα, χρησιμοποιόντας πάλι τη default συχνότητα του CPU και αλλάζοντας το τύπο της μνήμης και τις συχνότητες της σε LPDDR2_S4_1066_1x32 έχω για τον minorCPU τα εξής αποτελέσματα:  
 <pre>
 final_tick                                   45776000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
-host_inst_rate                                 232010                       # Simulator instruction rate (inst/s)
-host_mem_usage                                 711628                       # Number of bytes of host memory used
-host_op_rate                                   267179                       # Simulator op (including micro ops) rate (op/s)
+host_inst_rate                                 230904                       # Simulator instruction rate (inst/s)
+host_mem_usage                                 711632                       # Number of bytes of host memory used
+host_op_rate                                   265956                       # Simulator op (including micro ops) rate (op/s)
 host_seconds                                     0.06                       # Real time elapsed on the host
-host_tick_rate                              817053267                       # Simulator tick rate (ticks/s)
+host_tick_rate                              813367211                       # Simulator tick rate (ticks/s)
 sim_freq                                 1000000000000                       # Frequency of simulated ticks
 sim_insts                                       12972                       # Number of instructions simulated
 sim_ops                                         14964                       # Number of ops (including micro ops) simulated
@@ -137,11 +138,11 @@ sim_ticks                                    45776000                       # Nu
 Βάζοντας την ίδια μνήμη LPDDR2_S4_1066_1x32 στον TimingSimpleCPU τα αποτελέσματα μου είναι:  
 <pre>
 final_tick                                   52009000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
-host_inst_rate                                 647657                       # Simulator instruction rate (inst/s)
+host_inst_rate                                 325212                       # Simulator instruction rate (inst/s)
 host_mem_usage                                 707276                       # Number of bytes of host memory used
-host_op_rate                                   740337                       # Simulator op (including micro ops) rate (op/s)
-host_seconds                                     0.02                       # Real time elapsed on the host
-host_tick_rate                             2598754962                       # Simulator tick rate (ticks/s)
+host_op_rate                                   372839                       # Simulator op (including micro ops) rate (op/s)
+host_seconds                                     0.04                       # Real time elapsed on the host
+host_tick_rate                             1309473088                       # Simulator tick rate (ticks/s)
 sim_freq                                 1000000000000                       # Frequency of simulated ticks
 sim_insts                                       12887                       # Number of instructions simulated
 sim_ops                                         14803                       # Number of ops (including micro ops) simulated
