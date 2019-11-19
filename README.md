@@ -46,9 +46,15 @@ Line 1296: `ranks_per_channel=2`
 * Clock Domain 1000:  
 Line 46: `clock=1000`
 * Cache line size 64:  
-Line 15: `cache_line_size=64`    
+Line 15: `cache_line_size=64`      
 
-## Ερώτημα 2a  
+
+# Ερώτημα 3
+Minor is an in-order processor model with a fixed pipeline but configurable data structures and execute behaviour. It is intended to be used to model processors with strict in-order execution behaviour and allows visualisation of an instruction's position in the pipeline through the MinorTrace/minorview.py format/tool. The intention is to provide a framework for micro-architecturally correlating the model with a particular, chosen processor with similar capabilities.  
+
+The model isn't currently capable of multithreading but there are THREAD comments in key places where stage data needs to be arrayed to support multithreading.
+
+## Ερώτημα 3a  
 Από το stats.txt για την εκτέλεση με τον minorCPU παίρνω τα εξής:
 <pre>
 final_tick                                   36381000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
@@ -80,7 +86,7 @@ sim_ticks                                    44310000                       # Nu
 
 > Με τα παραπάνω αποτελέσματα παρατηρώ ότι το πρόγραμμα εκτελέστηκε γρηγορότερα με τον TimingSimpleCPU από ότι με τον MinorCPU.
 
-## Ερώτημα 2c  
+## Ερώτημα 3c  
 Αλλάζοντας την συχνότητα σε 10KHz, έχω τα εξής αποτελέσματα σε χρόνους για τον minorCPU:
 <pre>
 final_tick                               2160100000000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
