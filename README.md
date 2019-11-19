@@ -113,4 +113,34 @@ sim_ticks                                3965900000000                       # N
 
 > Αλλάζοντας σημαντικά τη συχνότητα σε 10KHz από 1GHz που είχαμε στο προηγούμενο ερώτημα, βλέπω πως τώρα ο minorCPU εκτελεί το πρόγραμμα γρηγορότερα από ότι τον TimingSimpleCPU.
 
+Τώρα, χρησιμοποιόντας πάλι τη default συχνότητα του CPU και αλλάζοντας το τύπο της μνήμης και τις συχνότητες της σε LPDDR2_S4_1066_1x32 έχω για τον minorCPU τα εξής αποτελέσματα:  
+<pre>
+final_tick                                   45776000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
+host_inst_rate                                 232010                       # Simulator instruction rate (inst/s)
+host_mem_usage                                 711628                       # Number of bytes of host memory used
+host_op_rate                                   267179                       # Simulator op (including micro ops) rate (op/s)
+host_seconds                                     0.06                       # Real time elapsed on the host
+host_tick_rate                              817053267                       # Simulator tick rate (ticks/s)
+sim_freq                                 1000000000000                       # Frequency of simulated ticks
+sim_insts                                       12972                       # Number of instructions simulated
+sim_ops                                         14964                       # Number of ops (including micro ops) simulated
+sim_seconds                                  0.000046                       # Number of seconds simulated
+sim_ticks                                    45776000                       # Number of ticks simulated
+</pre>  
 
+Βάζοντας την ίδια μνήμη LPDDR2_S4_1066_1x32 στον TimingSimpleCPU τα αποτελέσματα μου είναι:  
+<pre>
+final_tick                                   52009000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
+host_inst_rate                                 647657                       # Simulator instruction rate (inst/s)
+host_mem_usage                                 707276                       # Number of bytes of host memory used
+host_op_rate                                   740337                       # Simulator op (including micro ops) rate (op/s)
+host_seconds                                     0.02                       # Real time elapsed on the host
+host_tick_rate                             2598754962                       # Simulator tick rate (ticks/s)
+sim_freq                                 1000000000000                       # Frequency of simulated ticks
+sim_insts                                       12887                       # Number of instructions simulated
+sim_ops                                         14803                       # Number of ops (including micro ops) simulated
+sim_seconds                                  0.000052                       # Number of seconds simulated
+sim_ticks                                    52009000                       # Number of ticks simulated
+</pre>
+
+> Παρατηρώ όπως και με τις Default τιμές, ο TimingSimpleCPU είναι γρηγορότερος από τον minorCPU.
