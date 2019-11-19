@@ -68,6 +68,8 @@ The model **isn't** currently capable of multithreading but there are THREAD com
 
 ## _Ερώτημα 3a_  
 Από το stats.txt για την εκτέλεση με τον minorCPU παίρνω τα εξής:
+
+
 <pre>
 final_tick                                   36381000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
 host_inst_rate                                 187504                       # Simulator instruction rate (inst/s)
@@ -81,6 +83,8 @@ sim_ops                                         14964                       # Nu
 sim_seconds                                  0.000036                       # Number of seconds simulated
 sim_ticks                                    36381000                       # Number of ticks simulated
 </pre>  
+
+
 Από το stats.txt για την εκτέλεση με τον TimingSimpleCPU παίρνω τα εξής:
 <pre>
 final_tick                                   44310000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
@@ -95,6 +99,8 @@ sim_ops                                         14803                       # Nu
 sim_seconds                                  0.000044                       # Number of seconds simulated
 sim_ticks                                    44310000                       # Number of ticks simulated
 </pre>  
+
+
 
 > ### Με τα παραπάνω αποτελέσματα παρατηρώ ότι το πρόγραμμα εκτελέστηκε γρηγορότερα με τον TimingSimpleCPU από ότι με τον MinorCPU.
 
@@ -130,7 +136,11 @@ sim_ticks                                3965900000000                       # N
 system.cpu.Branches                              2653                       # Number of branches fetched
 </pre>  
 
+
+
 > ###  Αλλάζοντας σημαντικά τη συχνότητα σε 10KHz από 1GHz που είχαμε στο προηγούμενο ερώτημα, βλέπω πως τώρα ο minorCPU εκτελεί το πρόγραμμα γρηγορότερα από ότι τον TimingSimpleCPU.
+
+
 
 Τώρα, χρησιμοποιόντας πάλι τη default συχνότητα του CPU και αλλάζοντας το τύπο της μνήμης και τις συχνότητες της σε LPDDR2_S4_1066_1x32 έχω για τον minorCPU τα εξής αποτελέσματα:  
 <pre>
@@ -147,6 +157,8 @@ sim_seconds                                  0.000046                       # Nu
 sim_ticks                                    45776000                       # Number of ticks simulated
 </pre>  
 
+
+
 Βάζοντας την ίδια μνήμη LPDDR2_S4_1066_1x32 στον TimingSimpleCPU τα αποτελέσματα μου είναι:  
 <pre>
 final_tick                                   52009000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
@@ -162,7 +174,11 @@ sim_seconds                                  0.000052                       # Nu
 sim_ticks                                    52009000                       # Number of ticks simulated
 </pre>
 
+
+
 > ###  Παρατηρώ όπως και με τις Default τιμές, ο TimingSimpleCPU είναι γρηγορότερος από τον minorCPU.
+
+
 
 ## _Κριτική εργασίας_
 Αυτό που αποκομίσαμε από την εργασία είναι η σημασία της χρήσης του διαδικτύου για την ανάκτηση χρήσιμων πληροφοριών για την εκάστοτε περίπτωση. Την εργασία δεν θα την χαρακτηρίζαμε απλοϊκή αλλά αντιθέτως έχει ένα σχετικό βαθμό δυσκολίας κυρίως λόγω του όγκου των νέων πληροφοριών. Από την άλλη αποκομίσαμε όμως χρήσιμες πληροφορίες για τη λειτουργία ενός επεξεργαστή. Αυτό που κάνει δύσκολη την εργασία είναι η αναζήτηση πληροφοριών, ιδιαίτερα όταν δεν είσαι απόλυτα σίγουρος για αυτό που αναζητάς.
