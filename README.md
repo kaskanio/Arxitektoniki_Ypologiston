@@ -35,5 +35,10 @@
 
 ## Ερώτημα 2.
 Από το config.ini μπορώ να βρω τα εξής:
-* Line 67: type=MinorCPU
-* Line 25: mem_ranges=0:2147483647
+* Τύπος CPU:  
+Line 67: type=MinorCPU
+* Αριθμός threads:  
+Line 117: numThreads=1.
+* Μέγεθος μνήμης από 0~2GB.
+Line 25: mem_ranges=0:2147483647
+
