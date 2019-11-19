@@ -82,7 +82,7 @@ sim_insts                                       12972                       # Nu
 sim_ops                                         14964                       # Number of ops (including micro ops) simulated
 sim_seconds                                  0.000036                       # Number of seconds simulated
 sim_ticks                                    36381000                       # Number of ticks simulated
-</pre>  
+</pre>      
 
 
 Από το stats.txt για την εκτέλεση με τον TimingSimpleCPU παίρνω τα εξής:
