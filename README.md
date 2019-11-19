@@ -1,4 +1,4 @@
-# Οδηγες  
+# Οδηγίες  
 Οι φάκελοι έχουν ονομαστεί ως εξής:  
 * 3a_MinorCpu ->  Περιλαμβάνει τα αποτελέσματα από την εντολή ` ./build/ARM/gem5.opt -d er3a_minor configs/example/se.py --cpu-type=MinorCPU --caches --cmd=my_first `
 * 3a_TimingSimpleCpu -> Περιλαμβάνει τα αποτελέσματα από την εντολή ` ./build/ARM/gem5.opt -d er3a_timing configs/example/se.py --cpu-type=TimingSimpleCPU --caches --cmd=my_first `
