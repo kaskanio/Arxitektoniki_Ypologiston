@@ -111,3 +111,6 @@ sim_seconds                                  3.965900                       # Nu
 sim_ticks                                3965900000000                       # Number of ticks simulated
 </pre>  
 
+> Αλλάζοντας σημαντικά τη συχνότητα σε 10KHz από 1GHz που είχαμε στο προηγούμενο ερώτημα, βλέπω πως τώρα ο minorCPU εκτελεί το πρόγραμμα γρηγορότερα από ότι τον TimingSimpleCPU.
+
+
