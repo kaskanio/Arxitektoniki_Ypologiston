@@ -2,7 +2,7 @@
 Τα περισσότερα στοιχεία τα παίρνω μέσα από την main.
 
 * CPU Type:  Υπάρχουν 3 τύποι CPU, οι atomic, minor και hpi. Ο default είναι ο atomic.
- * parser.add_argument("--cpu", type=str, choices=cpu_types.keys(),
+  * parser.add_argument("--cpu", type=str, choices=cpu_types.keys(),
                         default="atomic",
 * CPU Frequency: Η default συνχότητα λειτουργίας είναι στα 4GHz.
   * parser.add_argument("--cpu-freq", type=str, default="4GHz")
