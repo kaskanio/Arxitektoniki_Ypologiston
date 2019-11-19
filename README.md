@@ -51,7 +51,7 @@ Line 15: `cache_line_size=64`
 #Ερώτημα 2α
 Από το stats.txt για την εκτέλεση με τον minorCPU παίρνω τα εξής:
 <pre>
-`final_tick44310000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
+final_tick44310000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
 host_inst_rate                                 689636                       # Simulator instruction rate (inst/s)
 host_mem_usage                                 707276                       # Number of bytes of host memory used
 host_op_rate                                   787408                       # Simulator op (including micro ops) rate (op/s)
@@ -61,5 +61,5 @@ sim_freq                                 1000000000000                       # F
 sim_insts                                       12887                       # Number of instructions simulated
 sim_ops                                         14803                       # Number of ops (including micro ops) simulated
 sim_seconds                                  0.000044                       # Number of seconds simulated
-sim_ticks                                    44310000                       # Number of ticks simulated`
+sim_ticks                                    44310000                       # Number of ticks simulated
 </pre>
