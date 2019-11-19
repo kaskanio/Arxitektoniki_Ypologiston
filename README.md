@@ -34,10 +34,10 @@
 * Cache: cache_line_size = 64.
 
 * Clock domain: 1GHz
- * self.clk_domain = SrcClockDomain(clock="1GHz",
+  * self.clk_domain = SrcClockDomain(clock="1GHz",
  
  * Voltage domain: 3.3V
-  * self.voltage_domain = VoltageDomain(voltage="3.3V")
+   * self.voltage_domain = VoltageDomain(voltage="3.3V")
 
 ## Ερώτημα 2.
 Από το config.ini μπορώ να βρω τα εξής:
