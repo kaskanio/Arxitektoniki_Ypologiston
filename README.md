@@ -48,7 +48,7 @@ Line 46: `clock=1000`
 * Cache line size 64:  
 Line 15: `cache_line_size=64`    
 
-## Ερώτημα 2α  
+## Ερώτημα 2a  
 Από το stats.txt για την εκτέλεση με τον minorCPU παίρνω τα εξής:
 <pre>
 final_tick                                   36381000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
@@ -76,5 +76,38 @@ sim_insts                                       12887                       # Nu
 sim_ops                                         14803                       # Number of ops (including micro ops) simulated
 sim_seconds                                  0.000044                       # Number of seconds simulated
 sim_ticks                                    44310000                       # Number of ticks simulated
-</pre>
+</pre>  
+
+> Με τα παραπάνω αποτελέσματα παρατηρώ ότι το πρόγραμμα εκτελέστηκε γρηγορότερα με τον TimingSimpleCPU από ότι με τον MinorCPU.
+
+## Ερώτημα 2c  
+Αλλάζοντας την συχνότητα σε 10KHz, έχω τα εξής αποτελέσματα σε χρόνους για τον minorCPU:
+<pre>
+final_tick                               2160100000000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
+host_inst_rate                                   4035                       # Simulator instruction rate (inst/s)
+host_mem_usage                                 711628                       # Number of bytes of host memory used
+host_op_rate                                     4655                       # Simulator op (including micro ops) rate (op/s)
+host_seconds                                     3.21                       # Real time elapsed on the host
+host_tick_rate                           671964561234                       # Simulator tick rate (ticks/s)
+sim_freq                                 1000000000000                       # Frequency of simulated ticks
+sim_insts                                       12972                       # Number of instructions simulated
+sim_ops                                         14964                       # Number of ops (including micro ops) simulated
+sim_seconds                                  2.160100                       # Number of seconds simulated
+sim_ticks                                2160100000000                       # Number of ticks simulated
+</pre>  
+
+Αλλάζοντας την συχνότητα σε 10KHz, έχω τα εξής αποτελέσματα σε χρόνους για τον TimingSimpleCPU:
+<pre>
+final_tick                               3965900000000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
+host_inst_rate                                   2242                       # Simulator instruction rate (inst/s)
+host_mem_usage                                 707276                       # Number of bytes of host memory used
+host_op_rate                                     2575                       # Simulator op (including micro ops) rate (op/s)
+host_seconds                                     5.75                       # Real time elapsed on the host
+host_tick_rate                           689928409045                       # Simulator tick rate (ticks/s)
+sim_freq                                 1000000000000                       # Frequency of simulated ticks
+sim_insts                                       12887                       # Number of instructions simulated
+sim_ops                                         14803                       # Number of ops (including micro ops) simulated
+sim_seconds                                  3.965900                       # Number of seconds simulated
+sim_ticks                                3965900000000                       # Number of ticks simulated
+</pre>  
 
