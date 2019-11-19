@@ -6,6 +6,9 @@
 * 3c_TimingSimpleCpu_clock -> Περιλαμβάνει τα αποτελέσματα από την εντολή ` ./build/ARM/gem5.opt -d er3c_timing10 configs/example/se.py --cpu-type=TimingSimpleCPU --cpu-clock=10000 --caches --cmd=my_first `
 * 3c_MinorCpu_Memory -> Περιλαμβάνει τα αποτελέσματα από την εντολή ` ./build/ARM/gem5.opt -d er3c_minorRAM configs/example/se.py --cpu-type=MinorCPU --mem-type='LPDDR2_S4_1066_1x32' --caches --cmd=my_first `
 * 3c_TimingSimpleCpu_Memory -> Περιλαμβάνει τα αποτελέσματα από την εντολή ` ./build/ARM/gem5.opt -d er3c_timingRAM configs/example/se.py --cpu-type=TimingSimpleCPU --mem-type='LPDDR2_S4_1066_1x32' --caches --cmd=my_first `
+* hello_result -> Περιλαμβάνει τα αποτελέσματα για το ερώτημα 1  
+
+Το αρχείο my_first.c είναι ο δικς μας κώδικας, ενώ το αρχείο my_first είναι ο κώδικας μας εκτελεσμένος σε ARM.
 
 # _Ερώτημα 1_
 Τα περισσότερα στοιχεία τα παίρνω μέσα από την main.
