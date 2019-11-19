@@ -17,18 +17,18 @@
 `parser.add_argument("--mem-channels", type=int, default=2, help = "number of memory channels")`  
                         
 * Memory Ranks: Default είναι 2.  
-`arser.add_argument("--mem-ranks", type=int, default=None, help = "number of memory ranks per channel")`
+`parser.add_argument("--mem-ranks", type=int, default=None, help = "number of memory ranks per channel")`
                         
 * Memory Size: Default είναι 2GB.  
-`arser.add_argument("--mem-size", action="store", type=str,
+`parser.add_argument("--mem-size", action="store", type=str,
                         default="2GB",
                         help="Specify the physical memory size")`
                         
 * Clock domain: 1GHz  
-`elf.clk_domain = SrcClockDomain(clock="1GHz",voltage_domain=self.voltage_domain)`
+`self.clk_domain = SrcClockDomain(clock="1GHz",voltage_domain=self.voltage_domain)`
  
 * Voltage domain: 3.3V  
-`elf.voltage_domain = VoltageDomain(voltage="3.3V")`
+`self.voltage_domain = VoltageDomain(voltage="3.3V")`
 
 * Cache: `cache_line_size = 64`.  
 
