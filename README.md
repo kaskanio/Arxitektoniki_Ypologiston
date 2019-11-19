@@ -1,4 +1,4 @@
-## Ερώτημα 1.
+# Ερώτημα 1.
 Τα περισσότερα στοιχεία τα παίρνω μέσα από την main.
 
 * CPU Type:  Υπάρχουν 3 τύποι CPU, οι atomic, minor και hpi. Ο default είναι ο atomic.  
@@ -33,7 +33,7 @@
 * Cache: `cache_line_size = 64`.  
 
 
-## Ερώτημα 2.
+# Ερώτημα 2.
 Από το config.ini μπορώ να βρω τα εξής:
 * Τύπος CPU Minor (αφού τρέχουμε την εντολή με τον minor):  
 Line 67: `type=MinorCPU`
@@ -48,7 +48,7 @@ Line 46: `clock=1000`
 * Cache line size 64:  
 Line 15: `cache_line_size=64`    
 
-# Ερώτημα 2α  
+## Ερώτημα 2α  
 Από το stats.txt για την εκτέλεση με τον minorCPU παίρνω τα εξής:
 <pre>
 final_tick                                   36381000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
