@@ -24,12 +24,14 @@
                         default="2GB",
                         help="Specify the physical memory size")`
                         
-* Cache: `cache_line_size = 64`.  
 * Clock domain: 1GHz  
 `elf.clk_domain = SrcClockDomain(clock="1GHz",voltage_domain=self.voltage_domain)`
  
 * Voltage domain: 3.3V  
 `elf.voltage_domain = VoltageDomain(voltage="3.3V")`
+
+* Cache: `cache_line_size = 64`.  
+
 
 ## Ερώτημα 2.
 Από το config.ini μπορώ να βρω τα εξής:
