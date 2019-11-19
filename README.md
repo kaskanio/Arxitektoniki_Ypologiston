@@ -1,11 +1,11 @@
 # Οδηγες  
 Οι φάκελοι έχουν ονομαστεί ως εξής:  
-* 3a_MinorCpu ->  Περιλαμβάνει τα αποτελέσματα από την εντολή `./build/ARM/gem5.opt -d er3a_minor configs/example/se.py --cpu-type=MinorCPU --caches --cmd=my_first
-* 3a_TimingSimpleCpu -> Περιλαμβάνει τα αποτελέσματα από την εντολή `./build/ARM/gem5.opt -d er3a_timing configs/example/se.py --cpu-type=TimingSimpleCPU --caches --cmd=my_first
-* 3c_MinorCpu_clock -> Περιλαμβάνει τα αποτελέσματα από την εντολή `./build/ARM/gem5.opt -d er3c_minor10 configs/example/se.py --cpu-type=MinorCPU --cpu-clock=10000 --caches --cmd=my_first
-* 3c_TimingSimpleCpu_clock -> Περιλαμβάνει τα αποτελέσματα από την εντολή `./build/ARM/gem5.opt -d er3c_timing10 configs/example/se.py --cpu-type=TimingSimpleCPU --cpu-clock=10000 --caches --cmd=my_first
-* 3c_MinorCpu_Memory -> Περιλαμβάνει τα αποτελέσματα από την εντολή `./build/ARM/gem5.opt -d er3c_minorRAM configs/example/se.py --cpu-type=MinorCPU --mem-type='LPDDR2_S4_1066_1x32' --caches --cmd=my_first
-* 3c_TimingSimpleCpu_Memory -> Περιλαμβάνει τα αποτελέσματα από την εντολή `./build/ARM/gem5.opt -d er3c_timingRAM configs/example/se.py --cpu-type=TimingSimpleCPU --mem-type='LPDDR2_S4_1066_1x32' --caches --cmd=my_first
+* 3a_MinorCpu ->  Περιλαμβάνει τα αποτελέσματα από την εντολή ` ./build/ARM/gem5.opt -d er3a_minor configs/example/se.py --cpu-type=MinorCPU --caches --cmd=my_first `
+* 3a_TimingSimpleCpu -> Περιλαμβάνει τα αποτελέσματα από την εντολή ` ./build/ARM/gem5.opt -d er3a_timing configs/example/se.py --cpu-type=TimingSimpleCPU --caches --cmd=my_first `
+* 3c_MinorCpu_clock -> Περιλαμβάνει τα αποτελέσματα από την εντολή ` ./build/ARM/gem5.opt -d er3c_minor10 configs/example/se.py --cpu-type=MinorCPU --cpu-clock=10000 --caches --cmd=my_first `
+* 3c_TimingSimpleCpu_clock -> Περιλαμβάνει τα αποτελέσματα από την εντολή ` ./build/ARM/gem5.opt -d er3c_timing10 configs/example/se.py --cpu-type=TimingSimpleCPU --cpu-clock=10000 --caches --cmd=my_first `
+* 3c_MinorCpu_Memory -> Περιλαμβάνει τα αποτελέσματα από την εντολή ` ./build/ARM/gem5.opt -d er3c_minorRAM configs/example/se.py --cpu-type=MinorCPU --mem-type='LPDDR2_S4_1066_1x32' --caches --cmd=my_first `
+* 3c_TimingSimpleCpu_Memory -> Περιλαμβάνει τα αποτελέσματα από την εντολή ` ./build/ARM/gem5.opt -d er3c_timingRAM configs/example/se.py --cpu-type=TimingSimpleCPU --mem-type='LPDDR2_S4_1066_1x32' --caches --cmd=my_first `
 
 # _Ερώτημα 1_
 Τα περισσότερα στοιχεία τα παίρνω μέσα από την main.
