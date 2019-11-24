@@ -219,6 +219,6 @@ sim_ticks                                    52009000                       # Nu
 
 # Βιβλιογραφία - Πηγές
 
-http://www.gem5.org/docs/html/minor.html?fbclid=IwAR2TIGYm1WFVFDFk-Pttan-vhq3P4eQTmFzYNiCBpakyM3ViJBXhCFW5mbs  
-http://www.m5sim.org/SimpleCPU?fbclid=IwAR2wBOGkbTHjwUsUpeSMbjlfYWT09RJXcv0XNUiNCUNvtTfYcKImjGFb-9s#BaseSimpleCPU  
-http://learning.gem5.org/book/part1/example_configs.html?fbclid=IwAR1_IDmOPc3AlOXZZRl9wxgP8fgM0kBjKRDGS07bSv0U9_GEaMBqO6I-Enw  
+* http://www.gem5.org/docs/html/minor.html?fbclid=IwAR2TIGYm1WFVFDFk-Pttan-vhq3P4eQTmFzYNiCBpakyM3ViJBXhCFW5mbs  
+* http://www.m5sim.org/SimpleCPU?fbclid=IwAR2wBOGkbTHjwUsUpeSMbjlfYWT09RJXcv0XNUiNCUNvtTfYcKImjGFb-9s#BaseSimpleCPU  
+* http://learning.gem5.org/book/part1/example_configs.html?fbclid=IwAR1_IDmOPc3AlOXZZRl9wxgP8fgM0kBjKRDGS07bSv0U9_GEaMBqO6I-Enw  
