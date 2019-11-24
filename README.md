@@ -51,7 +51,6 @@
 `self.voltage_domain = VoltageDomain(voltage="3.3V")`
 
 * Cache: `cache_line_size = 64`.  
-<br>
 
 
 # Ερώτημα 2
