@@ -214,5 +214,11 @@ sim_ticks                                    52009000                       # Nu
 
 <br><br>
 
-## _Κριτική εργασίας_
+# Κριτική εργασίας
 Αυτό που αποκομίσαμε από την εργασία είναι η σημασία της χρήσης του διαδικτύου για την ανάκτηση χρήσιμων πληροφοριών για την εκάστοτε περίπτωση. Την εργασία δεν θα την χαρακτηρίζαμε απλοϊκή αλλά αντιθέτως έχει ένα σχετικό βαθμό δυσκολίας κυρίως λόγω του όγκου των νέων πληροφοριών. Από την άλλη αποκομίσαμε όμως χρήσιμες πληροφορίες για τη λειτουργία ενός επεξεργαστή. Αυτό που κάνει δύσκολη την εργασία είναι η αναζήτηση πληροφοριών, ιδιαίτερα όταν δεν είσαι απόλυτα σίγουρος για αυτό που αναζητάς.
+
+# Βιβλιογραφία - Πηγές
+
+http://www.gem5.org/docs/html/minor.html?fbclid=IwAR2TIGYm1WFVFDFk-Pttan-vhq3P4eQTmFzYNiCBpakyM3ViJBXhCFW5mbs  
+http://www.m5sim.org/SimpleCPU?fbclid=IwAR2wBOGkbTHjwUsUpeSMbjlfYWT09RJXcv0XNUiNCUNvtTfYcKImjGFb-9s#BaseSimpleCPU  
+http://learning.gem5.org/book/part1/example_configs.html?fbclid=IwAR1_IDmOPc3AlOXZZRl9wxgP8fgM0kBjKRDGS07bSv0U9_GEaMBqO6I-Enw  
