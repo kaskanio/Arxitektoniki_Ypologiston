@@ -13,6 +13,10 @@
 # _Ερώτημα 1_
 Τα περισσότερα στοιχεία τα παίρνω μέσα από την main.
 
+* Ορισμός χρήσης συστήματος
+[root]
+full_system=false
+
 * CPU Type:  Υπάρχουν 3 τύποι CPU, οι atomic, minor και hpi. Ο default είναι ο atomic.  
 `parser.add_argument("--cpu", type=str, choices=cpu_types.keys(), default="atomic", help="CPU model to use")`
                         
