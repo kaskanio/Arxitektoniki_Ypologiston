@@ -13,10 +13,6 @@
 # _Ερώτημα 1_
 Τα περισσότερα στοιχεία τα παίρνω μέσα από την main.
 
-* Ορισμός χρήσης συστήματος
-[root]
-full_system=false
-
 * CPU Type:  Υπάρχουν 3 τύποι CPU, οι atomic, minor και hpi. Ο default είναι ο atomic.  
 `parser.add_argument("--cpu", type=str, choices=cpu_types.keys(), default="atomic", help="CPU model to use")`
                         
@@ -51,6 +47,9 @@ full_system=false
 
 # _Ερώτημα 2_
 Από το config.ini μπορώ να βρω τα εξής:
+* Ορισμός χρήσης συστήματος
+[root]
+full_system=false
 * Τύπος CPU Minor (αφού τρέχουμε την εντολή με τον minor):  
 Line 67: `type=MinorCPU`
 * Αριθμός threads 1:  
