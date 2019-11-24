@@ -71,7 +71,7 @@ Line 15: `cache_line_size=64`
 
 The model **isn't** currently capable of multithreading but there are THREAD comments in key places where stage data needs to be arrayed to support multithreading.
 
-#####Data structures
+##### Data structures
 Decorating data structures with large amounts of life-cycle information is avoided. Only instructions (MinorDynInst) contain a significant proportion of their data content whose values are not set at construction.
 
 All internal structures have fixed sizes on construction. Data held in queues and FIFOs (MinorBuffer, FUPipeline) should have a BubbleIF interface to allow a distinct 'bubble'/no data value option for each type.
