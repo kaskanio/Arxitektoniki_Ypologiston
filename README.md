@@ -1,6 +1,6 @@
 ### **Φοιτητές**: Κασκανιώτης Διονύσιος-Παναγιώτης, Τσίκας Δημήτριος-Ελευθέριος
 
-# _Οδηγίες_  
+# Οδηγίες_ 
 Οι φάκελοι έχουν ονομαστεί ως εξής:  
 * 3a_MinorCpu ->  Περιλαμβάνει τα αποτελέσματα από την εντολή  
 `./build/ARM/gem5.opt -d er3a_minor configs/example/se.py --cpu-type=MinorCPU --caches --cmd=my_first `
@@ -18,7 +18,7 @@
 
 Το αρχείο my_first.c είναι ο δικς μας κώδικας, ενώ το αρχείο my_first είναι ο κώδικας μας εκτελεσμένος σε ARM.
 <br>
-# _Ερώτημα 1_
+# Ερώτημα 1
 Τα περισσότερα στοιχεία τα παίρνω μέσα από την main.
 
 * CPU Type:  Υπάρχουν 3 τύποι CPU, οι atomic, minor και hpi. Ο default είναι ο atomic.  
@@ -54,7 +54,7 @@
 <br>
 
 
-# _Ερώτημα 2_
+# Ερώτημα 2
 Από το config.ini μπορώ να βρω τα εξής:
 * Ορισμός χρήσης συστήματος
 [root]
@@ -74,7 +74,7 @@ Line 15: `cache_line_size=64`
 
 <br>
 
-# _Ερώτημα 3_
+# Ερώτημα 3
 **Minor** is an _in-order processor_ model with a fixed pipeline but configurable data structures and execute behaviour. It is intended to be used to model processors with strict in-order execution behaviour and allows visualisation of an instruction's position in the pipeline through the MinorTrace/minorview.py format/tool. The intention is to provide a framework for micro-architecturally correlating the model with a particular, chosen processor with similar capabilities.  
 
 The model **isn't** currently capable of multithreading but there are THREAD comments in key places where stage data needs to be arrayed to support multithreading.
@@ -96,7 +96,7 @@ The BaseSimpleCPU can not be run on its own. You must use one of the classes tha
 
 The **TimingSimpleCPU** is the version of SimpleCPU that uses timing memory accesses (see Memory System for details). It stalls on cache accesses and waits for the memory system to respond prior to proceeding. Like the AtomicSimpleCPU, the TimingSimpleCPU is also derived from BaseSimpleCPU, and implements the same set of functions. It defines the port that is used to hook up to memory, and connects the CPU to the cache. It also defines the necessary functions for handling the response from memory to the accesses sent out.
 
-## _Ερώτημα 3a_  
+## Ερώτημα 3a  
 Από το stats.txt για την εκτέλεση με τον minorCPU παίρνω τα εξής:
 
 
@@ -135,7 +135,7 @@ sim_ticks                                    44310000                       # Nu
 > ### Με τα παραπάνω αποτελέσματα παρατηρώ ότι το πρόγραμμα εκτελέστηκε γρηγορότερα με τον TimingSimpleCPU από ότι με τον MinorCPU.
 <br>
 
-## _Ερώτημα 3c_  
+## Ερώτημα 3c  
 Αλλάζοντας την συχνότητα σε 10KHz, έχω τα εξής αποτελέσματα σε χρόνους για τον minorCPU:
 <pre>
 final_tick                               2160100000000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
