@@ -9,7 +9,7 @@
 * hello_result -> Περιλαμβάνει τα αποτελέσματα για το ερώτημα 1  
 
 Το αρχείο my_first.c είναι ο δικς μας κώδικας, ενώ το αρχείο my_first είναι ο κώδικας μας εκτελεσμένος σε ARM.
-
+<br>
 # _Ερώτημα 1_
 Τα περισσότερα στοιχεία τα παίρνω μέσα από την main.
 
@@ -43,6 +43,7 @@
 `self.voltage_domain = VoltageDomain(voltage="3.3V")`
 
 * Cache: `cache_line_size = 64`.  
+<br>
 
 
 # _Ερώτημα 2_
@@ -63,40 +64,29 @@ Line 46: `clock=1000`
 * Cache line size 64:  
 Line 15: `cache_line_size=64`      
 
+<br>
 
 # _Ερώτημα 3_
 **Minor** is an _in-order processor_ model with a fixed pipeline but configurable data structures and execute behaviour. It is intended to be used to model processors with strict in-order execution behaviour and allows visualisation of an instruction's position in the pipeline through the MinorTrace/minorview.py format/tool. The intention is to provide a framework for micro-architecturally correlating the model with a particular, chosen processor with similar capabilities.  
 
 The model **isn't** currently capable of multithreading but there are THREAD comments in key places where stage data needs to be arrayed to support multithreading.
 
- Το μοντέλο InOrder CPU σχεδιάστηκε για να παρέχει ένα γενικό πλαίσιο για την προσομοίωση διοχέτευση in-order 
- με αυθαίρετη ISA και με αυθαίρετες περιγραφές αγωγών. Οι εντολές φορτώνονται, εκτελούνται και συμπληρώνονται 
- σε in-order που παράγεται από τον μεταγλωττιστή. Βασικός in-order core είναι ο MinorCPU, ο οποίος μπορεί να 
- παραμετροποιηθεί για να ταιριάζει πιο πολύ με πραγματικούς πυρήνες. Το όνομα Minor προέρχεται από το M ΙN ΟrdeR
- και επεκτείνεται στους HPI και ex5_LITTLE για περαιτέρω παραμετροποίηση. 
- 
- Το μοντέλο CPU:Minor είναι ένας τύπου In-Order επεξεργαστής με προκαθορισμένη διαδικασία "διοχέτευσης" (pipeline), 
- ωστόσο οι δομές δεδομένων που χρησιμοποιεί καθώς και η συμπεριφορά εκτέλεσης αποτελούν τροποποιήσιμα στοιχεία του 
- συγκεκριμένου μοντέλου. Χρησιμοποιείται κατα κύριον λόγον για την μοντελοποίηση επεξεργαστών που χαρακτηρίζονται απο 
- αυστηρή In-Order εκτελεστική συμπεριφορά, και δίνει την δυνατότητα στον χρήστη να οπτικοποιήσει την θέση μιας 
- συγκεκριμένης εντολής μέσα στην "διοχέτευση" χρησιμοποιώντας το εργαλέιο MinorTrace/minorview.py format/tool.
- Βασικός στόχος είναι η διερέυνηση εξάρτησης μεταξύ του μοντέλου αυτού με οποιονδήποτε άλλον επεξεργαστή με παρόμοιες 
- δυνατότητες, μέσα σε ένα ολοκληρωμένο πλάισιο μικρο-αρχιτεκτονικής.Ακόμα πολύ σηματνικό είναι το γεγονός, πως το μοντέλο 
- Minor δεν υποστηρίζει την διαδικασία της "πολυνημάτωσης" (multithreading)Όσον αναφορά τις δομές δεδομένων του μοντέλου 
- αυτού, αξιοσημείωτο είναι οτι δοδές δεδομένων που περιέχουν αντικέιμενα των οποίων τα χαρακτηριστικά τροποποιόυνται κατά 
- την εκτέλεση του προγραμμάτος (Decorating Objects), καθώς επίσης και δομές δεδομένων που εμπεριέχουν πληροφορίες με μεγάλη
- "διάρκεια ζωής", αποφέυγονται. Όλες οι εσωτερικές δομές δεδομένων έχουν προκαθορισμένo μέγεθος μνήμης κατά την 
- αρχικοποίηση (construction).Οι μόνες θέσεις της μνήμης των οπόιων οι τιμές δεν ορίζονται κατά την αρχικοποίηση είναι 
- αυτές που σχετίζονται με το σετ εντολών MinorDynlnst. 
- 
- Πρώτα πρέπει να γίνει αναφορά στο μοντέλο BaseSimpleCPU καθώς το μοντέλο TimingSimpleCPU αποτελεί επέκταση αυτού. 
- Αρχικά το μοντέλο BaseSimpleCPU είναι υπεύθυνο για την κλήση συναρτήσεων που σχετίζονται με 1)"διακοπές" (interrupts),
- 2) fetch-requests, 3)διαχείριση της προ-εκτέλεσης κατάστασης, 4) διαχείριση των μετα-εκτέλεσης ενεργειών, 5)για την 
- μετάβαση του δείκτη PC στην επόμενη εντολή.Αυτές οι συναρτήσεις πρέπει να τονιστεί πως είναι κοινές για όλα μοντέλα 
- τύπου SimpleCPU. Επιπλέον μία απο τις βασικές ιδιότητες αυτού του μοντέλου είναι οτι προσθέτει την διεπαφή ExecContext,  
- η οποία περιγράφει την διεπαφή που χρησιμοποιεί το ISA ώστε να έχει άμεση πρόσβαση στην κατάσταση της CPU.Τέλος πολύ 
- σημαντικό είναι το γεγονός πως το μοντέλο BaseSimpleCPU δεν μπορεί να σταθεί μόνο του αυτούσιο, καθώς είναι απαραίτητο
- να χρησιμοποιήσει κάποιες κλάσεις που κληρονομεί είτε από την AtomicSimpleCPU είτε από την TimingSimpleCPU.
+#####Data structures
+Decorating data structures with large amounts of life-cycle information is avoided. Only instructions (MinorDynInst) contain a significant proportion of their data content whose values are not set at construction.
+
+All internal structures have fixed sizes on construction. Data held in queues and FIFOs (MinorBuffer, FUPipeline) should have a BubbleIF interface to allow a distinct 'bubble'/no data value option for each type.
+
+Inter-stage 'struct' data is packaged in structures which are passed by value. Only MinorDynInst, the line data in ForwardLineData and the memory-interfacing objects Fetch1::FetchRequest and LSQ::LSQRequest are '::new' allocated while running the model.
+
+The **BaseSimpleCPU** serves several purposes:
+
+* Holds architected state, stats common across the SimpleCPU models.
+* Defines functions for checking for interrupts, setting up a fetch request, handling pre-execute setup, handling post-execute actions, and advancing the PC to the next instruction. These functions are also common across the SimpleCPU models.
+* Implements the ExecContext interface.
+
+The BaseSimpleCPU can not be run on its own. You must use one of the classes that inherits from BaseSimpleCPU, either AtomicSimpleCPU or TimingSimpleCPU.
+
+The **TimingSimpleCPU** is the version of SimpleCPU that uses timing memory accesses (see Memory System for details). It stalls on cache accesses and waits for the memory system to respond prior to proceeding. Like the AtomicSimpleCPU, the TimingSimpleCPU is also derived from BaseSimpleCPU, and implements the same set of functions. It defines the port that is used to hook up to memory, and connects the CPU to the cache. It also defines the necessary functions for handling the response from memory to the accesses sent out.
 
 ## _Ερώτημα 3a_  
 Από το stats.txt για την εκτέλεση με τον minorCPU παίρνω τα εξής:
@@ -135,6 +125,7 @@ sim_ticks                                    44310000                       # Nu
 
 
 > ### Με τα παραπάνω αποτελέσματα παρατηρώ ότι το πρόγραμμα εκτελέστηκε γρηγορότερα με τον TimingSimpleCPU από ότι με τον MinorCPU.
+<br>
 
 ## _Ερώτημα 3c_  
 Αλλάζοντας την συχνότητα σε 10KHz, έχω τα εξής αποτελέσματα σε χρόνους για τον minorCPU:
