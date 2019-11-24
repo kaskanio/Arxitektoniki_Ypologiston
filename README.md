@@ -151,7 +151,7 @@ sim_ops                                         14964                       # Nu
 sim_seconds                                  2.160100                       # Number of seconds simulated
 sim_ticks                                2160100000000                       # Number of ticks simulated
 </pre>  
-
+<br>
 Αλλάζοντας την συχνότητα σε 10KHz, έχω τα εξής αποτελέσματα σε χρόνους για τον TimingSimpleCPU:
 <pre>
 final_tick                               3965900000000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
@@ -168,11 +168,11 @@ sim_ticks                                3965900000000                       # N
 system.cpu.Branches                              2653                       # Number of branches fetched
 </pre>  
 
-<br><br>
+<br>
 
 > ###  Αλλάζοντας σημαντικά τη συχνότητα σε 10KHz από 1GHz που είχαμε στο προηγούμενο ερώτημα, βλέπω πως τώρα ο minorCPU εκτελεί το πρόγραμμα γρηγορότερα από ότι τον TimingSimpleCPU.
 
-<br>
+<br><br>
 
 Τώρα, χρησιμοποιόντας πάλι τη default συχνότητα του CPU και αλλάζοντας το τύπο της μνήμης και τις συχνότητες της σε LPDDR2_S4_1066_1x32 έχω για τον minorCPU τα εξής αποτελέσματα:  
 <pre>
