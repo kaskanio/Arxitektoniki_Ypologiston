@@ -49,7 +49,7 @@
 Από το config.ini μπορώ να βρω τα εξής:
 * Ορισμός χρήσης συστήματος
 [root]
-full_system=false
+`full_system=false`
 * Τύπος CPU Minor (αφού τρέχουμε την εντολή με τον minor):  
 Line 67: `type=MinorCPU`
 * Αριθμός threads 1:  
