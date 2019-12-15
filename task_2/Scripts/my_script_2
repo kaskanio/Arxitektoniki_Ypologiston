@@ -1,0 +1,56 @@
+#!/bin/bash
+
+count=0
+for i in 32 64 128
+do  
+ let count++
+./build/ARM/gem5.opt -d SCRIPT/BZIP2/l1d/specbzip_"$count" configs/example/se.py --cpu-type=MinorCPU --caches --l2cache --l1d_size="$i"kB --l1i_size=64kB --l2_size=512kB --l1i_assoc=1 --l1d_assoc=1 --l2_assoc=2 --cacheline_size=64 --cpu-clock=1GHz -c spec_cpu2006/401.bzip2/src/specbzip -o "spec_cpu2006/401.bzip2/data/input.program 10" -I 100000000
+
+done
+
+
+count=0
+for i in 32 64 128 256
+do  
+ let count++
+./build/ARM/gem5.opt -d SCRIPT/BZIP2/l1i/specbzip_"$count" configs/example/se.py --cpu-type=MinorCPU --caches --l2cache --l1d_size=32kB --l1i_size="$i"kB --l2_size=512kB --l1i_assoc=1 --l1d_assoc=1 --l2_assoc=2 --cacheline_size=64 --cpu-clock=1GHz -c spec_cpu2006/401.bzip2/src/specbzip -o "spec_cpu2006/401.bzip2/data/input.program 10" -I 100000000
+
+done
+
+
+count=0
+for i in 256 512 1024 2048 4096
+do  
+ let count++
+./build/ARM/gem5.opt -d SCRIPT/BZIP2/l2/specbzip_"$count" configs/example/se.py --cpu-type=MinorCPU --caches --l2cache --l1d_size=32kB --l1i_size=64kB --l2_size="$i"kB --l1i_assoc=1 --l1d_assoc=1 --l2_assoc=2 --cacheline_size=64 --cpu-clock=1GHz -c spec_cpu2006/401.bzip2/src/specbzip -o "spec_cpu2006/401.bzip2/data/input.program 10" -I 100000000
+
+done
+
+
+count=0
+for i in 1 2 4 8
+do  
+ let count++
+./build/ARM/gem5.opt -d SCRIPT/BZIP2/l1_assoc/specbzip_"$count" configs/example/se.py --cpu-type=MinorCPU --caches --l2cache --l1d_size=32kB --l1i_size=64kB --l2_size=512kB --l1i_assoc=$i --l1d_assoc=$i --l2_assoc=2 --cacheline_size=64 --cpu-clock=1GHz -c spec_cpu2006/401.bzip2/src/specbzip -o "spec_cpu2006/401.bzip2/data/input.program 10" -I 100000000
+
+done
+
+
+
+count=0
+for i in 1 2 4 8
+do  
+ let count++
+./build/ARM/gem5.opt -d SCRIPT/BZIP2/l2_assoc/specbzip_"$count" configs/example/se.py --cpu-type=MinorCPU --caches --l2cache --l1d_size=32kB --l1i_size=64kB --l2_size=512kB --l1i_assoc=1 --l1d_assoc=1 --l2_assoc=$i --cacheline_size=64 --cpu-clock=1GHz -c spec_cpu2006/401.bzip2/src/specbzip -o "spec_cpu2006/401.bzip2/data/input.program 10" -I 100000000
+
+done
+
+
+
+count=0
+for i in 16 32 64 128 
+do  
+ let count++
+./build/ARM/gem5.opt -d SCRIPT/BZIP2/cache_line/specbzip_"$count" configs/example/se.py --cpu-type=MinorCPU --caches --l2cache --l1d_size=32kB --l1i_size=64kB --l2_size=512kB --l1i_assoc=1 --l1d_assoc=1 --l2_assoc=2 --cacheline_size=$i --cpu-clock=1GHz -c spec_cpu2006/401.bzip2/src/specbzip -o "spec_cpu2006/401.bzip2/data/input.program 10" -I 100000000
+
+done

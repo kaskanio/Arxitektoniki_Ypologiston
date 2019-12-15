@@ -1,0 +1,17 @@
+#!/bin/bash
+
+count=0
+for i in 16 32 64 128
+do  
+	for j in 1 2 4 8 
+	do
+ let count++
+./build/ARM/gem5.opt -d SCRIPT/MCF/l1d/specmcf_"$count" configs/example/se.py --cpu-type=MinorCPU --caches --l2cache --l1d_size=32kB --l1i_size=32kB --l2_size=512kB --l1i_assoc=$j --l1d_assoc=$j --l2_assoc=2 --cacheline_size=$i --cpu-clock=1GHz -c spec_cpu2006/429.mcf/src/specmcf -o "spec_cpu2006/429.mcf/data/inp.in" -I 100000000
+
+	done
+done
+
+
+
+ 
+ 

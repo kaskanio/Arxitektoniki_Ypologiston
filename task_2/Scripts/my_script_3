@@ -1,0 +1,20 @@
+#!/bin/bash
+
+
+
+./build/ARM/gem5.opt -d SCRIPT/BZIP2/OLA_MAZI/specbzip_1 configs/example/se.py --cpu-type=MinorCPU --caches --l2cache --l1d_size=32kB --l1i_size=32kB --l2_size=256kB --l1i_assoc=1 --l1d_assoc=1 --l2_assoc=2 --cacheline_size=16 --cpu-clock=1GHz -c spec_cpu2006/401.bzip2/src/specbzip -o "spec_cpu2006/401.bzip2/data/input.program 10" -I 100000000
+
+
+./build/ARM/gem5.opt -d SCRIPT/BZIP2/OLA_MAZI/specbzip_2 configs/example/se.py --cpu-type=MinorCPU --caches --l2cache --l1d_size=64kB --l1i_size=32kB --l2_size=512kB --l1i_assoc=1 --l1d_assoc=1 --l2_assoc=2 --cacheline_size=32 --cpu-clock=1GHz -c spec_cpu2006/401.bzip2/src/specbzip -o "spec_cpu2006/401.bzip2/data/input.program 10" -I 100000000
+
+
+./build/ARM/gem5.opt -d SCRIPT/BZIP2/OLA_MAZI/specbzip_3 configs/example/se.py --cpu-type=MinorCPU --caches --l2cache --l1d_size=128kB --l1i_size=32kB --l2_size=1024kB --l1i_assoc=1 --l1d_assoc=1 --l2_assoc=2 --cacheline_size=64 --cpu-clock=1GHz -c spec_cpu2006/401.bzip2/src/specbzip -o "spec_cpu2006/401.bzip2/data/input.program 10" -I 100000000
+
+
+./build/ARM/gem5.opt -d SCRIPT/BZIP2/OLA_MAZI/specbzip_4 configs/example/se.py --cpu-type=MinorCPU --caches --l2cache --l1d_size=256kB --l1i_size=32kB --l2_size=2048kB --l1i_assoc=1 --l1d_assoc=1 --l2_assoc=2 --cacheline_size=128 --cpu-clock=1GHz -c spec_cpu2006/401.bzip2/src/specbzip -o "spec_cpu2006/401.bzip2/data/input.program 10" -I 100000000
+
+
+
+./build/ARM/gem5.opt -d SCRIPT/BZIP2/OLA_MAZI/specbzip_5 configs/example/se.py --cpu-type=MinorCPU --caches --l2cache --l1d_size=256kB --l1i_size=32kB --l2_size=4096kB --l1i_assoc=1 --l1d_assoc=1 --l2_assoc=2 --cacheline_size=128 --cpu-clock=1GHz -c spec_cpu2006/401.bzip2/src/specbzip -o "spec_cpu2006/401.bzip2/data/input.program 10" -I 100000000
+
+
