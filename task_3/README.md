@@ -30,5 +30,5 @@ Energy_Efficiency (Xeon) = 40x / 72.92 =~ 0.55x
 ## Ερώτημα 1
 Πληροφορίες για το delay θα πάρουμε μέσα από το αρχείο stats.txt του gem_5, από τη παράμετρο sim_seconds.
 Για το energy θα τρέξουμε την εντολή:
-<pre> print_energy.py [options] <mcpat_output_file> <gem5_stats_file> </pre>
+<pre> print_energy.py [options] mcpat_output_file gem5_stats_file </pre>
 για το κώδικα της python που υπάρχει στο φάκελο Scripts από το repository που κατεβάσαμε.
